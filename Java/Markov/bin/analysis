@@ -1,0 +1,42 @@
+11.	
+i)I hypothesize that the runtime of BruteGenerator and MapGenerator increases as the length of the training text increases, vice versa.Because This is because if length of text is n, the runtime would be O(n), since for (int j=0; j<text.size()-1;j++){ consists of one for loop iterating once through text.
+ii)Assuming the k-value to be k, the runtime is O(1) because there’s no for loop in TrainingText, which uses k.
+iii)The runtime would be O(n) because for (int i=0;i<length;i++){ consists of one for loop iterating once. 
+
+2.
+i) The benchmark data in MapGenerator and BruteGenerator supports the hypothesis that big O is o(n), because the mean runtime changes in proportion to the length of the training text. For example, in Brute Generator, when the text length changes from 20 to 40, the mean runtime changes from 0.225145 second to 0.438883 second, as shown in the data table below. In MapGenerator,when text length changes from 20 to 40, the mean runtime changes from 0.000020 second to 0.000047, as shown in the data table below. 
+
+Data for BruteGenerator:
+
+
+
+Data for MapGenerator: 
+
+ii) The benchmark data in both MapGenerator and BruteGenerator support the hypothesis that big O is O(1), as the mean runtime changes little as K changes. For example, in MapGenerator, when k changes from 2 to 4, the mean runtime changes from 0.000105 second to 0.000099 second, which isn’t a big change. Similarly, in BruteGenerator, when k changes from 1 to 4, the mean runtime changes from 1.021992 seconds to 1.033843 seconds, which isn’t a big change either. 
+Map Generator Data:
+
+
+BruteGenerator Data:
+
+
+iii) The benchmark data in both MapGenerator and BruteGenerator support the hypothesis that big O is O(n), as the mean runtime approximately doubles as K doubles. For example, in MapGenerator, when the length of the random text doubles to 120 from 60, the mean runtime also approximately doubles to 0.000152 second from 0.000079 second.  In BruteGenerator, when the length of the random text doubles to 40 from 20, the mean runtime also approximately doubles to 0.438883 second from 0.225145 second.
+
+MapGenerator Data:
+
+
+BruteGenerator Data: 
+
+
+3
+i)	The big O notation for Hashmap with the default hashCode function is O(n) , with n being the number of keys in the map, because every item in the map would refer to the same hashCode. The program has to go through every key in the hashmap until it finds what it’s looking for.
+ii)	For an efficient hashCode, the big O notation is O(1) because the program could get the key and the values right away. 
+iii)	The big O notation for Treemap is O(log n) with n being the number of unique keys in the map because a treemap uses binary search trees, for which the most number of searches needed would be the height of the tree, which is log(n).
+
+4.  i) The benchmark data in MapGenerator generally supports the hypothesis that big O notation is O(n), as the mean runtime changes proportionately as the number of unique keys in the map changes. For example, when the number of unique keys changes from 2694 to 2982, the mean runtime changes from 0.000129 second to 0.000123 second, with the changes being proportionate to each other.  However, there are also changes that are disproportionate. For example, as the number of unique keys changes from 41306 to 68922,  the mean runtime changes from 0.000301 second to 0.000266 second . This could be because that the program doesn’t use a Linked List here and actually uses a binary search tree instead, in which case, the big O notation would be O(log n), with n being the number of unique keys in the map. That said, the data does largely support the hypothesis, as shown below: 
+ii) The benchmark data in MapGenerator support the hypothesis that big O is O(1), as the mean runtime changes little as the number of keys changes. For example, when the unique keys in the map change from 2694 to 3939, the mean runtime changes from 0.000048 second to 0.000036 second, which is a small change. The benchmark data is shown below.
+
+iii)	The benchmark data in MapGenerator support the hypothesis that big O is O (log n) with n being the number of unique keys in the map. For example, when the number of unique keys changes from 2982 to 3939, the mean runtimes changes from 0.000073 second to 0.000091 second, which validates the hypothesis. The benchmark data is shown below.
+
+
+
+

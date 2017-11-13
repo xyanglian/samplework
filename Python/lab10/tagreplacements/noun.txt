@@ -1,0 +1,10 @@
+house
+door
+garbage can
+frisbee
+clown
+computer
+chair
+belly button
+bathtub
+brush

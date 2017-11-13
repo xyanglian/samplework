@@ -1,0 +1,69 @@
+\project_{bar} (\select_{beer = 'Corona'} serves);
+(bar:string)
+----------------------------------------------------------------------
+The Edge
+Satisfaction
+Down Under Pub
+James Joyce Pub
+----------------------------------------------------------------------
+4 tuples returned
+\project_{beer} ((\select_{(drinker = 'Ben') and (times_a_week = 1)} frequents) \join serves);
+(beer:string)
+----------------------------------------------------------------------
+Corona
+Amstel
+Dixie
+Erdinger
+Budweiser
+----------------------------------------------------------------------
+5 tuples returned
+\project_{name, address} (((\select_{bar = 'Talk of the Town'} serves) \join likes) \join_{drinker = name} drinker);
+(name:string, address:string)
+----------------------------------------------------------------------
+Ben, 101 W. Main Street
+Eve, 100 W. Main Street
+Amy, 100 W. Main Street
+Dan, 300 N. Duke Street
+----------------------------------------------------------------------
+4 tuples returned
+\project_{name, namenew} (drinker \join_{(name > namenew) and (address = addressnew)} (\rename_{namenew, addressnew} drinker));
+(name:string, namenew:string)
+----------------------------------------------------------------------
+Eve, Amy
+----------------------------------------------------------------------
+1 tuple returned
+(\project_{name} beer) \diff (\project_{beer} likes);
+WARNING: (\project_{name} beer) \diff (\project_{beer} likes): input attributes at position 0 have different names: beer.name vs. likes.beer
+(name:string)
+----------------------------------------------------------------------
+Full Sail
+----------------------------------------------------------------------
+1 tuple returned
+(\project_{beer, bar} serves) \diff (\project_{beer, bar} (serves \join_{(beer = beer1) and (price < price1)} (\rename_{bar1, beer1, price1} serves)));
+(beer:string, bar:string)
+----------------------------------------------------------------------
+Erdinger, James Joyce Pub
+Budweiser, The Edge
+Full Sail, Satisfaction
+Dixie, James Joyce Pub
+Corona, James Joyce Pub
+Amstel, James Joyce Pub
+----------------------------------------------------------------------
+6 tuples returned
+(\project_{name} drinker) \diff (\project_{drinker} ((\project_{drinker, bar} frequents) \diff (\project_{drinker, bar} (likes \join serves))));
+WARNING: (\project_{name} drinker) \diff (\project_{drinker} ((\project_{drinker, bar} frequents) \diff (\project_{drinker, bar} (likes \join serves)))): input attributes at position 0 have different names: drinker.name vs. frequents.drinker
+(name:string)
+----------------------------------------------------------------------
+Ben
+Amy
+Eve
+Dan
+----------------------------------------------------------------------
+4 tuples returned
+(\project_{name} drinker) \diff (\project_{drinker} ((\project_{drinker, bar} (likes \join serves)) \diff (\project_{drinker, bar} frequents)));
+WARNING: (\project_{name} drinker) \diff (\project_{drinker} ((\project_{drinker, bar} (likes \join serves)) \diff (\project_{drinker, bar} frequents))): input attributes at position 0 have different names: drinker.name vs. likes.drinker
+(name:string)
+----------------------------------------------------------------------
+Dan
+----------------------------------------------------------------------
+1 tuple returned

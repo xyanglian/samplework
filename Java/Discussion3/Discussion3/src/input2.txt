@@ -1,0 +1,31 @@
+1
+Hello!
+1
+This isn't a number
+2
+1
+Neither is this
+But this is!: 2
+3
+1
+2
+3
+4
+1
+2
+3
+4
+5
+1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+5
+6
+7

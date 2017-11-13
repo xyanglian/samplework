@@ -1,0 +1,10 @@
+red
+orange
+aqua
+chartreuse
+magenta
+Duke-blue
+green
+forest green
+orange
+brown

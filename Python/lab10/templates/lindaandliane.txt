@@ -1,0 +1,4 @@
+You have a <adjective> <noun> in a <place>. 
+My <color> <animal> has a better <noun>
+that I <emotive-verb>.
+I want to <verb> some <adjective> <food> with it.

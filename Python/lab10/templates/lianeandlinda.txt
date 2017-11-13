@@ -1,0 +1,3 @@
+I <emotive-verb> <famouspeople> because once I saw <famouspeople>
+eating a <food> with a <noun> in <adjective> <place>. There
+was a <color> <animal> by its side.

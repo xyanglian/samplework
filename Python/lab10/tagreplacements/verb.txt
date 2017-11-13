@@ -1,0 +1,8 @@
+run
+climb
+explain
+ride
+giggle
+sleep
+walk
+swim
